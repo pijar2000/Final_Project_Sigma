@@ -22,7 +22,7 @@ for record in data:
     prediction = response.json()['prediction']
     predictions.append(prediction)
 
-# Menyimpan hasil prediksi ke dalam file CSV
+# save to CSV
 with open('prediction_web.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(['prediction'])

@@ -4,7 +4,7 @@ import numpy as np
 
 model, optimal_thresh = joblib.load('app/model_pandas.joblib')
 
-class_names = np.array(['0', '1'])  # Assuming '0' is for on-time and '1' is for late
+class_names = np.array(['0', '1'])  # '0' is for on-time and '1' is for late
 
 app = FastAPI()
 
