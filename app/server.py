@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import joblib
 import numpy as np
 
-model, optimal_thresh = joblib.load('app/model_pandas.joblib')
+model, optimal_thresh = joblib.load('app/best_rf_model.joblib')
 
 class_names = np.array(['0', '1'])  # '0' is for on-time and '1' is for late
 
