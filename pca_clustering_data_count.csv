@@ -1,0 +1,5 @@
+cluster,Calls,Rating,Cost,Purchases,Discount,Weight (gram),Late,Warehouse_A,Warehouse_B,Warehouse_C,Warehouse_D,Warehouse_F,Shipment_Flight,Shipment_Road,Shipment_Ship,Reorder_purchases,Importance_low,Importance_medium,Importance_high
+0,0,559,0,0,180,0,2337,363,336,350,0,1785,0,0,2834,2131,2214,620,0
+1,0,243,0,0,100,0,710,0,0,0,1202,0,0,0,1202,940,580,514,108
+2,0,706,0,0,254,0,2024,574,577,571,575,1134,1728,1703,0,2618,1662,1468,301
+3,0,653,0,0,275,0,1211,840,865,850,0,620,0,0,3175,2403,717,1985,473
