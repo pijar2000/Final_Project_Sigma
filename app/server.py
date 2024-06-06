@@ -18,7 +18,4 @@ def predict(data: dict):
     features = np.array(data['features'])
 
     # Perform prediction
-    prediction = model.predict(features.reshape(1, -1))
-    predicted_class = class_names[prediction][0]
-
-    return {'prediction': predicted_class}
+    model_rf_new.joblib
