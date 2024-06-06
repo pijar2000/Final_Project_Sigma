@@ -1,3 +1,5 @@
 python==3.8
 gunicorn
 streamlit
+streamlit_option_menu
+firebase_admin
