@@ -9,7 +9,7 @@ from sklearn.pipeline import Pipeline
 def load_model():
     
     import joblib
-    return joblib.load('model_rf_new.joblib')
+    return joblib.load('model_dt_new.joblib')
 
 model = load_model()
 
