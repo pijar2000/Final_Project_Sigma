@@ -15,7 +15,7 @@ model = load_model()
 
 def e_commerce_prediction(input_data):
     # Konversi input data menjadi DataFrame
-    input_df = pd.DataFrame([input_data], columns=['Cost', 'Purchases', 'Importance', 'Discount', 'Weight (gram)', 'Warehouse_A', 'Warehouse_B', 'Warehouse_C', 'Warehouse_D', 'Warehouse_F', 'Shipment_Flight', 'Shipment_Road', 'Shipment_Ship'])
+    input_df = pd.DataFrame([input_data], columns=['Cost', 'Purchases', 'Importance', 'Discount', 'Weight (gram)', 'Warehouse_A', 'Warehouse_B', 'Warehouse_C', 'Warehouse_D', 'Warehouse_F', 'Shipment_Flight', 'Shipment_Road', 'Shipment_Ship', 'reorder_purchases'])
 
     # Lakukan prediksi
     prediction = model.predict(input_df)
@@ -53,6 +53,7 @@ def main():
     Shipment_Flight = st.checkbox('Shipment by Flight')
     Shipment_Road = st.checkbox('Shipment by Road')
     Shipment_Ship = st.checkbox('Shipment by Ship')
+    reorder_purchases = st.checkbox('Is it Reorder?')
 
     
     # Kode untuk prediksi
@@ -60,7 +61,7 @@ def main():
     
     # Membuat tombol untuk prediksi
     if st.button('Check Shipping Status'):
-        diagnosis = e_commerce_prediction([Cost, Purchases, Importance, Discount, Weight, Warehouse_A, Warehouse_B, Warehouse_C, Warehouse_D, Warehouse_F, Shipment_Flight, Shipment_Road, Shipment_Ship])
+        diagnosis = e_commerce_prediction([Cost, Purchases, Importance, Discount, Weight, Warehouse_A, Warehouse_B, Warehouse_C, Warehouse_D, Warehouse_F, Shipment_Flight, Shipment_Road, Shipment_Ship, reorder_purchases])
         
     st.success(diagnosis)
 
